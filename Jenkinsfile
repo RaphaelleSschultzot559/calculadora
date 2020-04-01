@@ -1,5 +1,10 @@
 pipeline {
-  agent any
+  agent {
+    node {
+      label 'slave-builder'
+    }
+
+  }
   stages {
     stage('Build') {
       steps {
@@ -12,7 +17,7 @@ pipeline {
 
     stage('Notify') {
       steps {
-        sh 'echo "Simulando envío de mensaje"'
+        sh 'echo "Simulando envÃ­o de mensaje"'
       }
     }
 
