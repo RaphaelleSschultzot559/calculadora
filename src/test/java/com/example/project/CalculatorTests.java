@@ -72,7 +72,8 @@ class CalculatorTests {
 			"0,    1,   -1",
 			"1,    2,   -1",
 			"51,  49, 2",
-			"0,  0, 0"
+			"0,  0, 0",
+			"100,  -10, 110",
 	})
 	void substract(int first, int second, int expectedResult) {
 		Calculator calculator = new Calculator();
