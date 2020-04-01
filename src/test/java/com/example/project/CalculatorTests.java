@@ -67,7 +67,7 @@ class CalculatorTests {
 				() -> first + " + " + second + " should equal " + expectedResult);
 	}
 
-	@ParameterizedTest(name = "{0} + {1} = {2}")
+	@ParameterizedTest(name = "{0} - {1} = {2}")
 	@CsvSource({
 			"0,    1,   -1",
 			"1,    2,   -1",
