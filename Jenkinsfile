@@ -10,5 +10,11 @@ pipeline {
       }
     }
 
+    stage('Notify') {
+      steps {
+        sh 'echo "Simulando envío de mensaje"'
+      }
+    }
+
   }
 }
