@@ -12,6 +12,7 @@ package com.example.project.calculadoras;
 
 import com.example.project.historico.HistoricoSimple;
 import com.example.project.operadores.OperadorBinario;
+import com.example.project.operadores.OperadorResta;
 import com.example.project.operadores.OperadorSuma;
 
 public class Calculator {
@@ -23,7 +24,14 @@ public class Calculator {
     }
 
     public double sumar(double op1, double op2) {
-        OperadorBinario operadorBinario = new OperadorSuma(op1, op2);
+        return aplicar(new OperadorSuma(op1, op2));
+    }
+
+    public double restar(double op1, double op2) {
+        return aplicar(new OperadorResta(op1, op2));
+    }
+
+    private double aplicar(OperadorBinario operadorBinario) {
         operadorBinario.ejecutarOperacion();
         historicoSimple.add(operadorBinario);
         return operadorBinario.getResultado();
