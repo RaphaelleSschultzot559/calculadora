@@ -41,6 +41,7 @@ class CalculatorTests {
 			"0,    0",
 			"1,    1",
 			"49,  49",
+			"4,  4",
 			"100,  100"
 	})
 	void tamanyoHistoricoTrasOperaciones(int operaciones, int expectedResult) {
